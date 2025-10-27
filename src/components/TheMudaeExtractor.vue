@@ -1,0 +1,76 @@
+<script setup>
+import { ref, watch } from 'vue'
+
+const message = ref('');
+const totalCharacters = ref(0)
+const topNames = ref('')
+const copied = ref(false)
+
+const copyToClipboard = async () => {
+    try {
+        await navigator.clipboard.writeText(topNames.value)
+        copied.value = true
+        setTimeout(() => (copied.value = false), 1500)
+    } catch (err) {
+        console.error('Failed to copy:', err)
+    }
+}
+
+watch(message, (newValue) => {
+    const names = [];
+    const topMessage = newValue.split("#")
+
+    const hasEmojis = /[\p{Extended_Pictographic}]/u.test(newValue)
+
+    topMessage.forEach((element) => {
+        const matches = element.matchAll(/ - (.*?) - /g)
+        for (const match of matches) {
+            let name = match[1].trim()
+            if (hasEmojis) {
+                // Remove emojis if they exist (normal $top)
+                name = name.replace(/[\p{Extended_Pictographic}]/gu, '').trim()
+            }
+
+            // Remove leftover weird symbols
+            name = name.replace(/\s{2,}/g, ' ')
+
+            if (name) names.push(name)
+        }
+    })
+    topNames.value = names.join(" $ ")
+    totalCharacters.value = names.length
+    console.log('Total Characters:', names.length)
+    console.log('Extracted names:', names)
+    console.log('Joined string:', topNames.value)
+})
+
+</script>
+
+<template>
+
+    <label for="message" class="block !mb-2 text-sm font-medium text-raisin-black dark:text-floral-white">
+        Paste any text you gotten from a character list command such as <code style="user-select: all;">$topux-</code>
+        mudae channel and copy paste the result here
+    </label>
+
+    <textarea id="message" v-model="message" rows="4"
+        class="block w-full p-3 !mb-2 rounded-xl bg-white/10 border border-gray-300/20 backdrop-blur-sm text-sm text-gray-900 dark:text-white dark:bg-gray-800/40 focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
+        placeholder="Example: #7 - Bunny Girl Senpai - Seishun Buta Yarou"></textarea>
+
+    <div class="!mb-2">
+        <span class="text-sm text-gray-700 dark:text-gray-300">
+            Total number of characters:
+            <strong>{{ totalCharacters }}</strong>
+        </span>
+    </div>
+
+    <div v-if="topNames"
+        class="!mb-3 text-sm text-gray-700 dark:text-gray-300 break-words mt-2 border border-gray-300/20 rounded-lg p-2 bg-white/5">
+        {{ topNames }}
+
+    </div>
+    <button v-if="topNames" @click="copyToClipboard"
+        class="text-sm px-3 py-1.5 rounded-lg bg-accent-glow-lumina-core/20 border border-accent-glow-lumina-core/30 text-raisin-black dark:text-floral-white hover:bg-accent-glow-lumina-core/30 transition-all">
+        {{ copied ? 'Copied!' : 'Copy Result' }}
+    </button>
+</template>
