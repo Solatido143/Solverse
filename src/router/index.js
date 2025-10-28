@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import QuestsView from '../views/QuestsView.vue'
-import MudaeTopExtractor from '../views/MudaeTopExtractorView.vue'
+import MudaeTopExtractorView from '../views/MudaeTopExtractorView.vue'
+import TiypanikiView from '../views/TiypanikiView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +20,12 @@ const router = createRouter({
     {
       path: '/mudae-top-name-extractor',
       name: 'mudaetopnameextractor',
-      component: MudaeTopExtractor,
+      component: MudaeTopExtractorView,
+    },
+    {
+      path: '/tiypaniki',
+      name: 'tiypaniki',
+      component: TiypanikiView,
     },
     {
       path: '/about',

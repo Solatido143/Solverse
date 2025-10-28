@@ -1,5 +1,6 @@
 <script setup>
 import TheMudaeExtractor from '../components/TheMudaeExtractor.vue'
+
 </script>
 
 <template>

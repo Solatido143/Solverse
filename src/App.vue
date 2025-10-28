@@ -13,7 +13,7 @@ const isOpen = ref(false);
     <!-- Header -->
     <header class="border-b border-border-soft-veil bg-midnight-panel-astral shadow-md">
       <nav>
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="./assets/solverseicon.png" class="h-8 hidden  " alt="Solverse Logo" />
             <span

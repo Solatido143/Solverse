@@ -31,7 +31,7 @@ watch(message, (newValue) => {
                 name = name.replace(/[\p{Extended_Pictographic}]/gu, '').trim()
             }
 
-            // Remove leftover weird symbols
+            // Remove leftover weird symbols, specific for 2B or character with number in their names
             name = name.replace(/\s{2,}/g, ' ')
 
             if (name) names.push(name)
@@ -55,7 +55,7 @@ watch(message, (newValue) => {
 
     <textarea id="message" v-model="message" rows="4"
         class="block w-full p-3 !mb-2 rounded-xl bg-white/10 border border-gray-300/20 backdrop-blur-sm text-sm text-gray-900 dark:text-white dark:bg-gray-800/40 focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
-        placeholder="Example: #7 - Bunny Girl Senpai - Seishun Buta Yarou"></textarea>
+        placeholder="Example: #7 - Bunny Girl Senpai - Seishun Buta Yarou #15 - Makima 💞 - Chainsaw Man"></textarea>
 
     <div class="!mb-2">
         <span class="text-sm text-gray-700 dark:text-gray-300">
@@ -69,8 +69,14 @@ watch(message, (newValue) => {
         {{ topNames }}
 
     </div>
-    <button v-if="topNames" @click="copyToClipboard"
-        class="text-sm px-3 py-1.5 rounded-lg bg-accent-glow-lumina-core/20 border border-accent-glow-lumina-core/30 text-raisin-black dark:text-floral-white hover:bg-accent-glow-lumina-core/30 transition-all">
-        {{ copied ? 'Copied!' : 'Copy Result' }}
-    </button>
+    <div class="flex gap-0 sm:gap-3 justify-between sm:justify-start">
+        <button v-if="topNames" @click="copyToClipboard"
+            class="text-sm px-3 py-1.5 rounded-lg bg-accent-glow-lumina-core/20 border border-accent-glow-lumina-core/30 text-raisin-black dark:text-floral-white hover:bg-accent-glow-lumina-core/30 transition-all">
+            {{ copied ? 'Copied!' : 'Copy Result' }}
+        </button>
+        <button v-if="message" @click="message = ''; topNames = ''; totalCharacters = 0;"
+            class="text-sm px-3 py-1.5 rounded-lg bg-gray-500/20 border border-gray-500/30 text-gray-700 dark:text-gray-300 hover:bg-gray-500/30 transition-all ml-2">
+            Clear
+        </button>
+    </div>
 </template>

@@ -1,9 +1,22 @@
 <script setup>
-import TheHome from '../components/TheHome.vue'
+import TheCard from '../components/TheCard.vue'
 </script>
 
 <template>
-  <main class="flex-grow flex justify-center px-6 py-10 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
-    <TheHome />
+  <main class="flex-grow px-6 py-10 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
+    <div class="flex justify-center">
+      <div class="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <TheCard 
+        title="Mudae Extractor"
+        desription="Extract name from your $top"
+        to="/mudae-top-name-extractor"
+        />
+        <TheCard 
+        title="Explore Tiypaniki"
+        desription="Embark on a journey across the vast lands of Tiypaniki — uncover secrets, gather relics, and forge your own path through an ever-changing world."
+        to="/tiypaniki"
+        />
+      </div>
+    </div>
   </main>
 </template>
