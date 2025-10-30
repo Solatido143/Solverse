@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import QuestsView from '../views/QuestsView.vue'
-import MudaeTopExtractorView from '../views/MudaeTopExtractorView.vue'
-import TiypanikiView from '../views/TiypanikiView.vue'
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,17 +11,22 @@ const router = createRouter({
     {
       path: '/quests',
       name: 'quests',
-      component: QuestsView,
+      component: () => import('../views/QuestsView.vue'),
     },
     {
       path: '/mudae-top-name-extractor',
       name: 'mudaetopnameextractor',
-      component: MudaeTopExtractorView,
+      component: () => import('../views/MudaeTopExtractorView.vue'),
     },
     {
       path: '/tiypaniki',
       name: 'tiypaniki',
-      component: TiypanikiView,
+      component: () => import('../views/TiypanikiView.vue')
+    },
+    {
+      path: '/coor-convert',
+      name: 'coordinateconverter',
+      component: () => import('../views/CoorConvertView.vue')
     },
     {
       path: '/about',
