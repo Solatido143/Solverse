@@ -3,7 +3,7 @@ import TheCard from '../components/TheCard.vue'
 </script>
 
 <template>
-  <main class="flex-grow px-6 py-10 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
+  <main class="flex-grow p-2 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
     <div class="flex justify-center">
       <div class="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <TheCard 
