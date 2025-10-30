@@ -12,8 +12,8 @@ import TheCard from '../components/TheCard.vue'
         to="/mudae-top-name-extractor"
         />
         <TheCard 
-        title="Explore Tiypaniki"
-        desription="Embark on a journey across the vast lands of Tiypaniki — uncover secrets, gather relics, and forge your own path through an ever-changing world."
+        title="Tiypaniki"
+        desription="A world where hidden powers shape fate — and family ties are more dangerous than any curse."
         to="/tiypaniki"
         />
       </div>
