@@ -21,12 +21,17 @@ const router = createRouter({
     {
       path: '/tiypaniki',
       name: 'tiypaniki',
-      component: () => import('../views/TiypanikiView.vue')
+      component: () => import('../views/TiypanikiView.vue'),
     },
     {
       path: '/coor-convert',
       name: 'coordinateconverter',
-      component: () => import('../views/CoorConvertView.vue')
+      component: () => import('../views/CoorConvertView.vue'),
+    },
+    {
+      path: '/books',
+      name: 'books',
+      component: () => import('../views/BooksView.vue'),
     },
     {
       path: '/about',
