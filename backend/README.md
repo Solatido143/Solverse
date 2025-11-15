@@ -1,3 +1,48 @@
+# Backend (Laravel)
+
+This folder contains the Laravel application that serves the API and handles data persistence.
+
+Location: `backend/`
+
+## Requirements
+
+- PHP 8.1+
+- Composer
+- A supported database (MySQL, PostgreSQL, SQLite, etc.)
+
+## Setup
+
+```powershell
+cd .\backend
+composer install
+copy .env.example .env
+php artisan key:generate
+# Edit .env to configure your DB and other environment variables
+php artisan migrate --seed
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+## Useful commands
+
+- Run tests: `php artisan test`
+- Run migrations: `php artisan migrate`
+- Rollback: `php artisan migrate:rollback`
+- Seed database: `php artisan db:seed --class=BooksSeeder`
+
+## Notable files
+
+- `app/Models/Books.php` — Book model
+- `app/Models/User.php` — User model
+- `routes/api.php` — API routes
+- `database/migrations/` — Migrations folder
+- `database/seeders/BooksSeeder.php` — Example seeder
+
+## API
+
+The API endpoints are defined in `routes/api.php`. By default the app serves on `http://127.0.0.1:8000` when using `php artisan serve`.
+
+If you use a different host/port, update the frontend `VITE_API_URL` accordingly.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
