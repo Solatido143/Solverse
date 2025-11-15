@@ -12,7 +12,7 @@ Location: `frontend/`
 ## Setup & Development
 
 ```powershell
-cd .\frontend
+cd frontend
 npm install
 npm run dev
 ```
@@ -22,7 +22,7 @@ Vite will print the local URL (e.g. `http://localhost:5173`). By default the fro
 ## Build for production
 
 ```powershell
-cd .\frontend
+cd frontend
 npm run build
 ```
 
