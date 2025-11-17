@@ -9,6 +9,7 @@ const books = ref([])
 onMounted(() => {
     api.get('/books')
         .then(function (response) {
+            console.log(response.data)
             books.value = response.data
         })
         .catch(function (error) {
