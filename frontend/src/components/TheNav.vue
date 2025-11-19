@@ -8,16 +8,36 @@ const isSidebarOpen = ref(false)
 </script>
 
 <template>
-    <header class="border-b border-border-soft-veil bg-midnight-panel-astral shadow-md fixed z-30 w-full">
+    <header class="border-b border-border-soft-veil bg-midnight-panel-astral shadow-md fixed z-30 w-full h-16">
         <nav>
-            <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <div class="flex flex-wrap items-center justify-between mx-auto px-4 h-16">
+                <!-- Nav -->
+                <div class="hidden md:block md:w-auto mt-3 md:mt-0 pt-3 md:pt-0">
+                    <ul
+                        class="font-medium flex flex-col gap-2 p-2 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 border-border-soft-veil bg-midnight-panel-astral/70 backdrop-blur-sm">
+                        <li>
+                            <RouterLink to="/" class="block hover:text-accent-glow-lumina-core transition-colors">
+                                Home</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/about" class="block hover:text-accent-soft-ethereal transition-colors">
+                                About</RouterLink>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Logo/Title -->
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
                     <img src="./assets/solverseicon.png" class="h-8 hidden  " alt="Solverse Logo" />
                     <span
                         class="self-center text-2xl font-bold whitespace-nowrap text-accent-glow-lumina-core tracking-widest uppercase">
                         Solverse
                     </span>
                 </a>
+
+                <!-- Button -->
+                    <button class="hidden md:inline-flex items-center px-4 py-1 bg-accent-glow-lumina-core text-floral-white font-medium hover:bg-accent-glow-lumina-core/80 transition-all duration-200 shadow-sm hover:shadow">Start</button>
+
 
                 <button @click="isSidebarOpen = true" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-text-muted-ashen rounded-lg md:hidden hover:bg-surface-hover-oblivion focus:outline-none focus:ring-2 focus:ring-accent-soft-ethereal transition">
@@ -30,22 +50,6 @@ const isSidebarOpen = ref(false)
                 </button>
 
                 <TheSideBar :isOpen="isSidebarOpen" @close="isSidebarOpen = false" />
-
-                <div class="hidden md:block md:w-auto mt-3 md:mt-0 pt-3 md:pt-0">
-                    <ul
-                        class="font-medium flex flex-col gap-2 p-2 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 border-border-soft-veil bg-midnight-panel-astral/70 backdrop-blur-sm">
-                        <li>
-                            <RouterLink to="/" class="block hover:text-accent-glow-lumina-core transition-colors">Home
-                            </RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/about" class="block hover:text-accent-soft-ethereal transition-colors">
-                                About</RouterLink>
-                        </li>
-                    </ul>
-                </div>
-
-
             </div>
         </nav>
     </header>

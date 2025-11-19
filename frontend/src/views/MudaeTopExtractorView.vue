@@ -4,7 +4,7 @@ import TheMudaeExtractor from '../components/TheMudaeExtractor.vue'
 </script>
 
 <template>
-    <main class="flex-grow p-4">
+    <main class="flex-grow p-4 mt-16">
         <TheMudaeExtractor />
     </main>
-</template>
+</template> 
