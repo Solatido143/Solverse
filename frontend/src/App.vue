@@ -10,7 +10,7 @@ import TheNav from "./components/TheNav.vue";
   text-text-primary-silverlight flex flex-col font-sans tracking-wide selection:bg-accent-glow-lumina-core selection:text-starry-night-void">
 
     <!-- Header -->
-    <!-- <TheNav /> -->
+    <TheNav />
 
     <!-- Main Content -->
     <RouterView />
