@@ -32,7 +32,7 @@ const router = createRouter({
       path: '/books',
       name: 'books',
       children: [
-        {path: '', component: () => import("@/views/Books/Index.vue") },  
+        {path: '', name: 'books-index',component: () => import("@/views/Books/Index.vue") },  
       ],
     },
     {
