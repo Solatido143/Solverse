@@ -1,6 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\api\BookController;
+use App\Http\Controllers\API\BookController;
 
 Route::apiResource('books', BookController::class);
