@@ -9,6 +9,12 @@ const hasError = ref(false)
 const convert = () => {
     const [x, y, z] = input.value.split(',').map(v => parseFloat(v.trim()))
 
+    if (input.value.trim() === '' || !input.value) {
+        hasError.value = true
+        result.value = 'Please enter coordinates to convert.'
+        return
+    }
+
     if (isNaN(x) || isNaN(y) || isNaN(z)) {
         hasError.value = true
         result.value = `Invalid coordinates!`
@@ -26,7 +32,7 @@ const convert = () => {
 </script>
 
 <template>
-    <main class="flex-grow p-2 text-floral-white mt-16 bg-gradient-to-b from-gray-50 to to-gray-100 dark:from-gray-900 dark:to-black">
+    <main class="flex-grow p-2 text-text-primary-silverlight mt-16 bg-gradient-to-b from-gray-900 to-black">
         <div class="flex flex-col gap-3 items-center">
             <h2 class="text-xl font-semibold text-accent-soft-ethereal">Minecraft Coordinate Converter</h2>
 
@@ -34,15 +40,15 @@ const convert = () => {
                 Enter your coordinates <span class="text-accent-soft-ethereal">x, y, z</span>
             </label>
             <input v-model="input" id="coordinates" placeholder="Example: 120, 64, -450"
-                class="p-2 rounded-lg bg-midnight-panel-astral border border-border-soft-veil text-floral-white focus:outline-none focus:ring-2 focus:ring-accent-soft-ethereal" />
+                class="p-2 rounded-lg bg-midnight-panel-astral border border-border-soft-veil text-text-primary-silverlight focus:outline-none focus:ring-2 focus:ring-accent-soft-ethereal" />
 
             <div class="flex gap-2">
                 <button @click="mode = 'overworld'; convert()"
-                    class="flex-1 p-2 rounded-lg bg-accent-soft-ethereal text-midnight font-semibold hover:opacity-80 transition">
+                    class="flex-1 p-2 rounded-lg bg-accent-glow-lumina-core text-text-primary-silverlight font-semibold hover:opacity-80 transition">
                     Overworld → Nether
                 </button>
                 <button @click="mode = 'nether'; convert()"
-                    class="flex-1 p-2 rounded-lg bg-floral-white text-midnight font-semibold hover:opacity-80 transition">
+                    class="flex-1 p-2 rounded-lg bg-accent-soft-ethereal text-midnight-panel-astral/80 font-semibold hover:opacity-80 transition">
                     Nether → Overworld
                 </button>
             </div>

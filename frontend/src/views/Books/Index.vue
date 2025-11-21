@@ -21,11 +21,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <main class="flex-grow mt-16 p-5 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
+    <main class="flex-grow mt-16 p-5 bg-gradient-to-b from-gray-900 to-black">
         
         <button type="button" class="text-text-primary-silverlight bg-accent-glow-lumina-core box-border border border-transparent hover:bg-accent-glow-lumina-core/80 focus:ring-4 focus:ring-success-medium shadow-xs font-medium leading-5 rounded text-sm px-4 py-2.5 focus:outline-none">Create</button>
         
-        <div class="relative mt-5 overflow-x-auto shadow-xs rounded border">
+        <div class="relative mt-5 overflow-x-auto shadow-xs rounded border-border-soft-veil border">
             <table class="w-full text-sm text-left rtl:text-right text-body">
                 <thead class="text-sm text-body bg-midnight-panel-astral text-text-primary-silverlight border-border-soft-veil border-b rounded-base">
                     <tr>
