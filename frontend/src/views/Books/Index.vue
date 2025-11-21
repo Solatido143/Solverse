@@ -45,9 +45,9 @@ onMounted(() => {
                 </thead>
                 <tbody>
                     <tr v-for="book in books" class="bg-midnight-panel-astral border-b border-border-soft-veil hover:bg-surface-hover-oblivion transition-colors duration-200">
-                        <th scope="row" class="px-6 py-4 font-medium text-heading text-text-primary-silverlight whitespace-nowrap">
+                        <td class="px-6 py-4">
                             {{ book.name }}
-                        </th>
+                        </td>
                         <td class="px-6 py-4">
                             {{ book.author }}
                         </td>
