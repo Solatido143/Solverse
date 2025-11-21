@@ -3,7 +3,7 @@ import TheCard from '../components/TheCard.vue'
 </script>
 
 <template>
-  <main class="flex-grow p-3 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black !mt-16">
+  <main class="flex-grow mt-16 p-3 bg-gradient-to-b from-gray-900 to-black">
     <div class="flex justify-center">
       <div class="max-w-4xl">
         <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -14,6 +14,9 @@ import TheCard from '../components/TheCard.vue'
           <TheCard title="Coordinates Converter"
             desription="Convert your minecraft coordinates from overworld to nether or nether to overworld"
             to="/coor-convert" />
+          <TheCard title="Sample API Implementation"
+            desription="Books API implementation using Laravel Restful API and Vue 3"
+            to="/books" />
         </div>
       </div>
     </div>

@@ -31,26 +31,6 @@
   --color-disabled-gray: #d9d9d9; /* disabled elements */
 
   /* DARK MODE */
-  --color-smoky-black: #0f0d05; /* background — main base color */
-  --color-eerie-black: #1a1814; /* surface — cards, panels */
-  --color-davys-gray: #5f5959; /* borders, secondary buttons */
-  --color-maize: #fff05a; /* primary highlights, links */
-  --color-mint-cream: #f0f7f4; /* readable text */
-  --color-soft-gold: #c4b851; /* accent and secondary highlight */
-  --color-muted-gold: #c2b25b; /* reward / XP highlight */
-  --color-highlight-dark: #29261f; /* subtle highlight surface */
-  --color-success-moss: #9bbf7b; /* success / complete state */
-  --color-warning-gold: #d1a94c; /* warning / caution */
-  --color-error-mute: #c16256; /* error / invalid */
-  --color-info-soft: #8fa9c1; /* informational tone */
-  --color-hover-dark: #1f1c17; /* hover for cards/buttons */
-  --color-active-dark: #2a2720; /* pressed state */
-  --color-disabled-dark: #3c3933; /* disabled elements */
-  --color-glow-maize: rgba(255, 240, 90, 0.4); /* quest aura / glow */
-  --color-shadow-dark: rgba(0, 0, 0, 0.4); /* shadows */
-  --color-shadow-ambient-dark: rgba(255, 240, 90, 0.1); /* ambient tint */
-  --color-overlay-dark: rgba(15, 13, 5, 0.8); /* overlay for modals */
-
   --color-starry-night-void: #0b0c10; /* background — deep void of the night sky */
   --color-midnight-panel-astral: #161821; /* surface — dark astral panels */
   --color-accent-glow-lumina-core: #6c63ff; /* primary accent — lumina core energy */

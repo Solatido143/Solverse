@@ -36,7 +36,7 @@ const isSidebarOpen = ref(false)
                 </a>
 
                 <!-- Button -->
-                    <button class="hidden md:inline-flex items-center px-4 py-1 bg-accent-glow-lumina-core text-floral-white font-medium hover:bg-accent-glow-lumina-core/80 transition-all duration-200 shadow-sm hover:shadow">Start</button>
+                    <button class="hidden md:inline-flex items-center px-4 py-1 bg-accent-glow-lumina-core text-text-primary-silverlight font-medium hover:bg-accent-glow-lumina-core/80 transition-all duration-200 shadow-sm hover:shadow">Start</button>
 
 
                 <button @click="isSidebarOpen = true" type="button"

@@ -32,7 +32,10 @@ const router = createRouter({
       path: '/books',
       name: 'books',
       children: [
-        {path: '', name: 'books-index',component: () => import("@/views/books/index.vue") },  
+        {path: '', name: 'books-index',component: () => import("@/views/books/index.vue") },
+        {path: 'create', name: 'books-create',component: () => import("@/views/books/create.vue") },
+        {path: ':id/edit', name: 'books-edit',component: () => import("@/views/books/edit.vue") },
+        {path: ':id', name: 'books-show',component: () => import("@/views/books/show.vue") },
       ],
     },
     {

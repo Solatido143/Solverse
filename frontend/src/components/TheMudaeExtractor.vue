@@ -48,34 +48,34 @@ watch(message, (newValue) => {
 
 <template>
 
-    <label for="message" class="block !mb-2 text-sm font-medium text-raisin-black dark:text-floral-white">
+    <label for="message" class="block mb-2 text-sm font-medium">
         Paste any text you gotten from a character list command such as <code style="user-select: all;">$topux-</code>
         mudae channel and copy paste the result here
     </label>
 
     <textarea id="message" v-model="message" rows="4"
-        class="block w-full p-3 !mb-2 rounded-xl bg-white/10 border border-gray-300/20 backdrop-blur-sm text-sm text-gray-900 dark:text-white dark:bg-gray-800/40 focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
+        class="block w-full p-3 mb-2 rounded-xl bg-shadow-deep-umbra/80 border border-gray-300/20 backdrop-blur-sm text-sm text-text-primary-silverlight focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
         placeholder="Example: #7 - Bunny Girl Senpai - Seishun Buta Yarou #15 - Makima 💞 - Chainsaw Man"></textarea>
 
-    <div class="!mb-2">
-        <span class="text-sm text-gray-700 dark:text-gray-300">
+    <div class="mb-2">
+        <span class="text-sm text-text-primary-silverlight">
             Total number of characters:
             <strong>{{ totalCharacters }}</strong>
         </span>
     </div>
 
     <div v-if="topNames"
-        class="!mb-3 text-sm text-gray-700 dark:text-gray-300 break-words mt-2 border border-gray-300/20 rounded-lg p-2 bg-white/5">
+        class="mb-3 text-sm text-text-primary-silverlight break-words mt-2 border border-overlay-dark-nebulis/20 rounded-lg p-2 bg-disabled-gray-dormant/50">
         {{ topNames }}
 
     </div>
     <div class="flex gap-0 sm:gap-3 justify-between sm:justify-start">
         <button v-if="topNames" @click="copyToClipboard"
-            class="text-sm px-3 py-1.5 rounded-lg bg-accent-glow-lumina-core/20 border border-accent-glow-lumina-core/30 text-raisin-black dark:text-floral-white hover:bg-accent-glow-lumina-core/30 transition-all">
-            {{ copied ? 'Copied!' : 'Copy Result' }}
+            class="text-sm px-3 py-1.5 rounded-lg bg-accent-glow-lumina-core/20 border border-accent-glow-lumina-core/30 text-text-primary-silverlight hover:bg-accent-glow-lumina-core/30 transition-all">
+            {{ copied ? 'Copied' : 'Copy Result' }}
         </button>
         <button v-if="message" @click="message = ''; topNames = ''; totalCharacters = 0;"
-            class="text-sm px-3 py-1.5 rounded-lg bg-gray-500/20 border border-gray-500/30 text-gray-700 dark:text-gray-300 hover:bg-gray-500/30 transition-all ml-2">
+            class="text-sm px-3 py-1.5 rounded-lg bg-text-muted-ashen/20 border border-text-muted-ashen/30 text-text-primary-silverlight hover:bg-text-muted-ashen/30 transition-all ml-2">
             Clear
         </button>
     </div>

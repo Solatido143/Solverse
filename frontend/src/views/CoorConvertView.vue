@@ -26,7 +26,7 @@ const convert = () => {
 </script>
 
 <template>
-    <main class="flex-grow p-2 text-floral-white mt-16">
+    <main class="flex-grow p-2 text-floral-white mt-16 bg-gradient-to-b from-gray-50 to to-gray-100 dark:from-gray-900 dark:to-black">
         <div class="flex flex-col gap-3 items-center">
             <h2 class="text-xl font-semibold text-accent-soft-ethereal">Minecraft Coordinate Converter</h2>
 
