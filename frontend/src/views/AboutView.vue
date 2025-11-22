@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <main class="flex-grow sm:flex flex-col items-center justify-center text-center mt-16 px-6 py-12 bg-gradient-to-b from-gray-900 to-black">
+  <main class="flex-grow sm:flex flex-col items-center justify-center text-center mt-16 px-6 py-12 bg-gradient-to-b">
     <div class="max-w-4xl">
       <h1 class="text-3xl md:text-4xl font-bold text-text-primary-silverlight mb-4">
         About Solverse
