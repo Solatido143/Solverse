@@ -32,6 +32,7 @@ onMounted(() => {
         <div class="relative mt-5 overflow-x-auto shadow-xs rounded border-border-soft-veil border">
             <Table :books="books" />
         </div>
+        
         <div class="fixed hidden bottom-4 right-4 z-50 min-w-[300px]">
             <Toast/>
         </div>

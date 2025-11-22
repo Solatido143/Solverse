@@ -1,11 +1,14 @@
 <script setup>
 defineProps({
-    tdname: String,
+    tdname: {
+        type: String,
+        defaullt: '',
+    }
 })
 </script>
 
 <template>
     <td class="px-6 py-4">
-        {{ tdname }}
+        <slot> {{ tdname }} </slot>
     </td>
 </template>

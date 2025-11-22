@@ -24,6 +24,11 @@ const props = defineProps({
             <tr v-for="book in props.books" :key="book.id"
             class="bg-midnight-panel-astral border-b border-border-soft-veil hover:bg-surface-hover-oblivion transition-colors duration-200">
                 <TableData :tdname="book.name"/>
+                <TableData :tdname="book.author"/>
+                <TableData :tdname="book.publish_date"/>
+                <TableData>
+                    <RouterLink :to="`/books/${book.id}`" class="font-medium text-accent-glow-lumina-core hover:underline">View</RouterLink>
+                </TableData>
             </tr>
         </tbody>
     </table>
