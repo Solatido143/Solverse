@@ -10,7 +10,6 @@ const books = ref([])
 onMounted(() => {
     api.get('/books')
         .then(function (response) {
-            console.log(response.data)
             books.value = response.data
         })
         .catch(function (error) {
@@ -30,9 +29,23 @@ onMounted(() => {
         </div>
         
         <div class="relative mt-5 overflow-x-auto shadow-xs rounded border-border-soft-veil border">
-            <Table :books="books" />
+            <Table  
+                :columns="[
+                    { key: 'name', label: 'Name'},
+                    { key: 'author', label: 'Author'},
+                    { key: 'publish_date', label: 'Publish date'},
+                    { key: 'action', label: 'Action'},
+                ]"
+                :data="books"
+                >
+                <template #action="{ row }">
+                    <RouterLink :to="`/books/${row.id}`" class="font-medium text-accent-glow-lumina-core hover:underline">
+                        View
+                    </RouterLink>
+                </template>
+            </Table>
         </div>
-        
+
         <div class="fixed hidden bottom-4 right-4 z-50 min-w-[300px]">
             <Toast/>
         </div>
