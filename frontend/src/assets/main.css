@@ -9,46 +9,70 @@
 
 @theme {
   /* --color-*: initial; */
-
-  /* LIGHT MODE */
-  --color-floral-white: #faf8f1; /* background — main base color */
-  --color-parchment: #efe9d2; /* surface — cards, panels */
-  --color-dutch-white: #e4dbb4; /* border, primary actions, active states */
-  --color-slate-gray: #70798c; /* secondary text, buttons, minor accents */
-  --color-raisin-black: #252323; /* main text, strong contrast */
-  --color-soft-beige: #f0ebda; /* hover background for buttons/cards */
-  --color-gold-warm: #c9b77e; /* accent, highlight details */
-  --color-highlight-warm: #f5eed9; /* subtle highlight surfaces */
-  --color-success-green: #91a66b; /* success / complete state */
-  --color-warning-amber: #e8b86d; /* warning / pending */
-  --color-error-red: #c2645a; /* error indicators */
-  --color-info-blue: #6c8ba4; /* informational text */
-  --color-shadow-warm: rgba(37, 35, 35, 0.1); /* soft warm shadow */
-  --color-overlay-warm: rgba(37, 35, 35, 0.4); /* modal overlay */
-  --color-glow-warm: rgba(233, 205, 130, 0.6); /* quest aura / glow */
-  --color-gold-classic: #d4af37; /* XP / reward gold */
-  --color-shadow-ambient: rgba(112, 121, 140, 0.2); /* ambient depth */
-  --color-disabled-gray: #d9d9d9; /* disabled elements */
-
-  /* DARK MODE */
   --color-starry-night-void: #0b0c10; /* background — deep void of the night sky */
+
+  --color-woodsmoke: #0b0c10;
+  --color-woodsmoke-light: #545457;
+  --color-woodsmoke-lighter: #CECECF;
+  --color-woodsmoke-lightest: #E6E6E7;
+  --color-woodsmoke-dark: #08090C;
+  --color-woodsmoke-darker: #040406;
+  --color-woodsmoke-darkest: #030304;
+
   --color-midnight-panel-astral: #161821; /* surface — dark astral panels */
+
+  --color-cinder: #161821;
+  --color-cinder-light: #5B5D63;
+  --color-cinder-lighter: #D0D0D2;
+  --color-cinder-lightest: #E7E7E8;
+  --color-cinder-dark: #11131A;
+  --color-cinder-darker: #08090D;
+  --color-cinder-darkest: #060709;
+
   --color-accent-glow-lumina-core: #6c63ff; /* primary accent — lumina core energy */
+  
+  --color-cornflower-blue: #6c63ff;
+  --color-cornflower-blue-light: #9891FF;
+  --color-cornflower-blue-lighter: #E1DFFF;
+  --color-cornflower-blue-lightest: #F0EFFF;
+  --color-cornflower-blue-dark: #564FCC;
+  --color-cornflower-blue-darker: #2B2766;
+  --color-cornflower-blue-darkest: #201D4C;
+
   --color-accent-soft-ethereal: #a197ff; /* secondary accent — soft ethereal glow */
+  
+  --color-melrose: #a197ff;
+  --color-melrose-light: #BDB6FF;
+  --color-melrose-lighter: #ECEAFF;
+  --color-melrose-lightest: #F5F4FF;
+  --color-melrose-dark: #8078CC;
+  --color-melrose-darker: #403C66;
+  --color-melrose-darkest: #302D4C;
+
   --color-accent-pink-seraph: #ff85b3; /* alternate accent — seraph flare pink */
+  
+  --color-tickle-me-pink: #ff85b3;
+  --color-tickle-me-pink-light: #FFA9C9;
+  --color-tickle-me-pink-lighter: #FFE6EF;
+  --color-tickle-me-pink-lightest: #FFF2F7;
+  --color-tickle-me-pink-dark: #CC6A8F;
+  --color-tickle-me-pink-darker: #663547;
+  --color-tickle-me-pink-darkest: #4C2735;
+
   --color-text-primary-silverlight: #e4e4e7; /* main text — silverlight clarity */
   --color-text-muted-ashen: #9ca3af; /* secondary text — ashen tone */
   --color-border-soft-veil: #2a2c38; /* borders — subtle veil lines */
   --color-surface-hover-oblivion: #1c1e27; /* hover — oblivion shadow */
   --color-highlight-glow-aether: #8e80ff; /* hover accent — aetheric glow */
+
   --color-success-green-verdanite: #91e697; /* success — verdanite bloom */
-  --color-warning-amber-solflare: #f5c16c; /* warning — solflare amber */
-  --color-error-red-crimsonfall: #ff6b6b; /* error — crimsonfall red */
-  --color-info-blue-azurmist: #6c8ba4; /* info — azurmist blue */
+  --color-warning-rajah: #f5c16c; /* warning — solflare amber */
+  --color-error-bittersweet: #ff6b6b; /* error — crimsonfall red */
+  --color-info-bermuda-gray: #6c8ba4; /* info — azurmist blue */
   --color-shadow-deep-umbra: rgba(0, 0, 0, 0.4); /* shadow — umbra depth */
   --color-overlay-dark-nebulis: rgba(11, 12, 16, 0.6); /* overlay — nebulis veil */
   --color-glow-accent-lumisphere: rgba(108, 99, 255, 0.6); /* glow — lumisphere aura */
-  --color-reward-gold-solstice: #e5c07b; /* gold — solstice reward tone */
+  --color-reward-gold: #e5c07b; /* gold — solstice reward tone */
   --color-ambient-shadow-veilborne: rgba(142, 128, 255, 0.15); /* ambient depth — veilborne shimmer */
-  --color-disabled-gray-dormant: #3a3b47; /* disabled — dormant state */
+  --color-disabled-tuna: #3a3b47; /* disabled — dormant state */
 }
