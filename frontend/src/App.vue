@@ -9,7 +9,7 @@ import TheNav from "./components/TheNav.vue";
     class="min-h-screen bg-gradient-to-b from-starry-night-void via-midnight-panel-astral to-starry-night-void 
   text-text-primary-silverlight flex flex-col font-sans tracking-wide selection:bg-accent-glow-lumina-core selection:text-starry-night-void">
 
-    <!-- Header -->
+    <!-- Header -->52
     <TheNav />
 
     <!-- Main Content -->

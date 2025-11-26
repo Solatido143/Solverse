@@ -3,12 +3,12 @@ import TheCard from '../components/TheCard.vue'
 </script>
 
 <template>
-  <main class="mt-16 bg-gradient-to-b from-cinder to-woodsmoke">
-    <section class="p-5 pb-10 md:p-10">
+  <main class="mt-16">
+    <section class="p-5 pb-10 md:p-10 bg-woodsmoke-darkest">
       <div
         class="grid grid-cols-1 md:grid-cols-2 bg-cinder-darker border border-border-soft-veil rounded-base shadow-xs md:flex-row">
 
-        <img class="object-fill max-h-screen w-full rounded-base mb-4 md:mb-0" src="../assets/solverseicon.png"
+        <img class="object-fill max-h-screen w-full rounded-base mb-4 md:mb-0" src="../assets/solverseiconaight.png"
           alt="image">
 
         <div class="flex flex-col justify-center p-8 leading-normal">
@@ -31,11 +31,10 @@ import TheCard from '../components/TheCard.vue'
 
 
 
-    <section id="feature_section" class=" border-t border-b border-border-soft-veil shadow-xs">
+    <section id="feature_section">
       <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16">
         <p class="mb-6 text-text-primary-silverlight">Discover</p>
-        <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">Latest experimental
-          web tools</h1>
+        <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">Latest experimental <span class="text-melrose">web tools</span></h1>
         <p class="mb-8 text-base font-normal text-body md:text-xl md:px-16 xl:px-72">Innovative digital experiences that
           push the boundaries of what's possible. Each tool is crafted to spark curiosity and challenge traditional
           thinking.</p>
@@ -53,8 +52,6 @@ import TheCard from '../components/TheCard.vue'
           </button>
         </div>
       </div>
-
-
       <div class="flex justify-center text-sm font-medium text-center text-body">
         <ul class="flex flex-wrap -mb-px">
           <li class="me-2">
@@ -73,8 +70,6 @@ import TheCard from '../components/TheCard.vue'
           </li>
         </ul>
       </div>
-
-
       <div class="mt-8 px-4 mx-auto max-w-screen">
         <!-- Carousel wrapper -->
         <div class="relative rounded-base px-5 pb-10 md:px-10">
@@ -82,7 +77,7 @@ import TheCard from '../components/TheCard.vue'
           <div class="duration-700 ease-in-out">
             <div
               class="grid grid-cols-1 md:grid-cols-2 bg-starry-night-void/80 border border-border-soft-veil rounded-base shadow-xs md:flex-row">
-              <img class="object-contain max-h-screen w-full rounded-base mb-4 md:mb-0" src="../assets/solverseicon.png"
+              <img class="object-contain max-h-screen w-full rounded-base mb-4 md:mb-0" src="../assets/wood-texture.jpg"
                 alt="image">
               <div class="flex flex-col justify-center p-8 leading-normal">
                 <p class="mb-6 text-text-primary-silverlight">Explore</p>
@@ -106,8 +101,6 @@ import TheCard from '../components/TheCard.vue'
               </div>
             </div>
           </div>
-
-
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out">
             <img src="../assets/wood-texture.jpg"
@@ -125,7 +118,7 @@ import TheCard from '../components/TheCard.vue'
     </section>
 
 
-    <section class="max-h-screen p-10">
+    <section class="max-h-screen p-10 bg-woodsmoke-darkest">
       <div class="flex justify-center">
         <div class="max-w-4xl">
           <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
