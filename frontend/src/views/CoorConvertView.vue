@@ -7,19 +7,25 @@ const mode = ref('overworld')
 const hasError = ref(false)
 
 const convert = () => {
-    const [x, y, z] = input.value.split(',').map(v => parseFloat(v.trim()))
+    const parts = input.value
+        .trim()
+        .replace(/,/g, ' ')
+        .split(/\s+/)
+        .map(v => parseFloat(v))
 
-    if (input.value.trim() === '' || !input.value) {
+    if (!input.value.trim()) {
         hasError.value = true
         result.value = 'Please enter coordinates to convert.'
         return
     }
 
-    if (isNaN(x) || isNaN(y) || isNaN(z)) {
+    if (parts.length !== 3 || parts.some(v => isNaN(v))) {
         hasError.value = true
-        result.value = `Invalid coordinates!`
+        result.value = 'Invalid coordinates!'
         return
     }
+
+    const [x, y, z] = parts
 
     hasError.value = false
 
@@ -29,11 +35,12 @@ const convert = () => {
         result.value = `Overworld Coordinates: ${(x * 8).toFixed(2)}, ${y}, ${(z * 8).toFixed(2)}`
     }
 }
+
 </script>
 
 <template>
-    <main class="flex-grow p-2 text-text-primary-silverlight mt-16 bg-gradient-to-b from-gray-900 to-black">
-        <div class="flex flex-col gap-3 items-center">
+    <main class="flex-grow p-4 md:p-12 text-text-primary-silverlight mt-16 bg-gradient-to-b from-woodsmoke-darkest to-cinder min-h-screen">
+        <div class="flex flex-col gap-3 text-center items-center">
             <h2 class="text-xl font-semibold text-accent-soft-ethereal">Minecraft Coordinate Converter</h2>
 
             <label for="coordinates" class="text-sm text-gray-300">
@@ -54,7 +61,7 @@ const convert = () => {
             </div>
 
             <p class="mt-3 text-sm font-mono transition-colors"
-                :class="hasError ? 'text-error-red-crimsonfall' : 'text-gray-300'">
+                :class="hasError ? 'text-error-bittersweet' : 'text-gray-300'">
                 {{ result }}
             </p>
         </div>
