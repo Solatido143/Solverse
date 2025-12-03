@@ -17,26 +17,21 @@ const isActive = (path) => {
         <nav>
             <div class="flex flex-wrap items-center justify-between mx-auto px-4 md:px-10 h-16">
                 <div class="hidden md:block md:w-auto mt-3 md:mt-0 pt-3 md:pt-0">
-                    <ul class="font-medium flex flex-col gap-2 p-2 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 border-border-soft-veil bg-midnight-panel-astral/70 backdrop-blur-sm">
+                    <ul
+                        class="font-medium flex flex-col gap-2 p-2 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 border-border-soft-veil bg-midnight-panel-astral/70 backdrop-blur-sm">
                         <li>
-                            <RouterLink 
-                                to="/"
-                                :class="[
-                                    'block transition-colors hover:text-cornflower-blue',
-                                    isActive('/') ? 'text-cornflower-blue' : 'text-text-primary-silverlight',
-                                ]"
-                            >
+                            <RouterLink to="/" :class="[
+                                'block transition-colors hover:text-cornflower-blue',
+                                isActive('/') ? 'text-cornflower-blue' : 'text-text-primary-silverlight',
+                            ]">
                                 Home
                             </RouterLink>
                         </li>
                         <li>
-                            <RouterLink 
-                            to="/about" 
-                            :class="[
+                            <RouterLink to="/about" :class="[
                                 'block transition-colors hover:text-cornflower-blue',
                                 isActive('/about') ? 'text-cornflower-blue' : 'text-text-primary-silverlight',
-                            ]"
-                            >
+                            ]">
                                 About
                             </RouterLink>
                         </li>
@@ -44,7 +39,8 @@ const isActive = (path) => {
                 </div>
 
                 <!-- Logo/Title -->
-                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+                <a href="/"
+                    class="flex items-center space-x-3 rtl:space-x-reverse md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
                     <img src="../assets/favicon.png" class="h-8 md:hidden" alt="Solverse Logo" />
                     <span
                         class="hidden md:block self-center text-2xl font-bold whitespace-nowrap text-cornflower-blue tracking-widest uppercase">
@@ -53,7 +49,7 @@ const isActive = (path) => {
                 </a>
 
                 <!-- Button -->
-                    <button class="hidden md:inline-flex items-center px-4 py-1 bg-cornflower-blue text-text-primary-silverlight font-medium shadow-[0_4px_0_0] shadow-cornflower-blue-darker hover:bg-cornflower-blue-dark active:shadow-[0_0_0_0] active:translate-y-[4px] transition-all rounded-md">Start</button>
+                <button class="hidden md:inline-flex items-center px-4 py-1 bg-cornflower-blue text-text-primary-silverlight font-medium shadow-[0_4px_0_0] shadow-cornflower-blue-darker hover:bg-cornflower-blue-dark active:shadow-[0_0_0_0] active:translate-y-[4px] transition-all rounded-md">Start</button>
 
 
                 <button @click="isSidebarOpen = true" type="button"

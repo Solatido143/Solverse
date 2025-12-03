@@ -49,7 +49,7 @@ const buttonClasses = computed(() => {
 </script>
 
 <template>
-    <button :class="buttonClasses">
+    <a :class="buttonClasses">
         {{ label }}
-    </button>
+    </a>
 </template>

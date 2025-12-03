@@ -32,10 +32,18 @@ const router = createRouter({
       path: '/books',
       name: 'books',
       children: [
-        {path: '', name: 'books-index',component: () => import("@/views/books/bookindex.vue") },
-        {path: 'create', name: 'books-create',component: () => import("@/views/books/bookcreate.vue") },
-        {path: ':id/edit', name: 'books-edit',component: () => import("@/views/books/bookedit.vue") },
-        {path: ':id', name: 'books-show',component: () => import("@/views/books/bookshow.vue") },
+        { path: '', name: 'books-index', component: () => import('@/views/books/bookindex.vue') },
+        {
+          path: 'create',
+          name: 'books-create',
+          component: () => import('@/views/books/bookcreate.vue'),
+        },
+        {
+          path: ':id/edit',
+          name: 'books-edit',
+          component: () => import('@/views/books/bookedit.vue'),
+        },
+        { path: ':id', name: 'books-show', component: () => import('@/views/books/bookshow.vue') },
       ],
     },
     {
@@ -47,6 +55,20 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+
+    return { top: 0 }
+  },
 })
 
 export default router

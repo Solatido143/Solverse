@@ -19,7 +19,7 @@ import PressButton from '../components/PressButton.vue'
           <p class="mb-8 text-text-muted-ashen">Solverse transforms curiosity into digital experiences. We build
             experimental web tools that challenge imagination and push technological boundaries.</p>
           <div class="flex space-x-4">
-            <PressButton label="Explore" />
+            <PressButton href="#tools" label="Explore" />
             <PressButton label="Learn" bgColor="tickle-me-pink" stateMatter="hollow" textColorHover="woodsmoke" />
           </div>
         </div>
@@ -100,7 +100,7 @@ import PressButton from '../components/PressButton.vue'
     </section>
 
 
-    <section class="p-10 bg-woodsmoke-darkest">
+    <section class="p-10 md:py-20 bg-woodsmoke-darkest" id="tools">
       <div class="flex justify-center">
         <div class="max-w-4xl">
           <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
