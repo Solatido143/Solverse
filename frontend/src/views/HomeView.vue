@@ -7,13 +7,14 @@ import PressButton from '../components/PressButton.vue'
   <main class="mt-16">
     <section class="p-5 pb-10 md:p-10 bg-woodsmoke-darkest">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 bg-cinder-darker border border-border-soft-veil rounded-base shadow-xs md:flex-row">
-
-        <img class="object-fill max-h-screen w-full rounded-base mb-4 md:mb-0" src="../assets/solverseiconaight.png"
-          alt="image">
+        class="grid grid-cols-1 md:grid-cols-2 bg-cinder-darker border border-border-soft-veil rounded-base shadow-xs md:flex-row md:items-center">
+        
+        <img class="object-fill max-h-screen w-full rounded-base mb-4 md:mb-0"
+          src="../assets/solverseiconaight.png" alt="image">
 
         <div class="flex flex-col justify-center p-8 leading-normal">
-          <h5 class="mb-8 text-5xl font-bold tracking-tight text-heading text-text-primary-silverlight">Explore digital
+          <h5 class="mb-8 text-4xl md:text-5xl font-bold tracking-tight text-heading text-text-primary-silverlight">
+            Explore digital
             creativity through interactive tools</h5>
           <p class="mb-8 text-text-muted-ashen">Solverse transforms curiosity into digital experiences. We build
             experimental web tools that challenge imagination and push technological boundaries.</p>
@@ -53,24 +54,6 @@ import PressButton from '../components/PressButton.vue'
           </RouterLink>
         </div>
       </div>
-      <div class="flex justify-center text-sm font-medium text-center text-body">
-        <ul class="flex flex-wrap -mb-px">
-          <li class="me-2">
-            <button type="button" class="inline-block cursor-pointer p-4 border-b border-border-soft-veil rounded-t-base active">Web tools
-            </button>
-          </li>
-          <li class="me-2">
-            <button type="button" class="inline-block cursor-pointer p-4 border-b border-transparent rounded-t-base hover:border-brand">Hobby
-              apps
-            </button>
-          </li>
-          <li class="me-2">
-            <button type="button" class="inline-block cursor-pointer p-4 border-b border-transparent rounded-t-base hover:border-brand">Mini
-              projects
-            </button>
-          </li>
-        </ul>
-      </div>
       <div class="mt-8 px-4 mx-auto max-w-screen">
         <!-- Carousel wrapper -->
         <div class="relative rounded-base px-5 pb-10 md:px-10">
@@ -82,15 +65,15 @@ import PressButton from '../components/PressButton.vue'
                 alt="image">
               <div class="flex flex-col justify-center p-8 leading-normal">
                 <p class="mb-6 text-text-primary-silverlight">Explore</p>
-                <h5 class="mb-8 text-5xl font-bold tracking-tight text-heading text-text-primary-silverlight">Unleash
+                <h5 class="mb-8 text-4xl md:text-5xl font-bold tracking-tight text-heading text-text-primary-silverlight">Unleash
                   your digital creativity</h5>
                 <p class="mb-8 text-text-muted-ashen">Dive into a world where technology meets imagination. Transform
                   complex ideas into interactive experiences.</p>
                 <div class="flex space-x-2">
                   <PressButton label="Start" stateMatter="hollow" textColorHover="start" />
                   <RouterLink to="/"
-                    class="inline-flex items-center w-auto text-text-primary-silverlight hover:underline font-medium leading-5 text-sm px-4 py-2.5 transition-all select-none">Learn<svg
-                      xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ms-1.5 -me-0.5" width="24" height="24"
+                    class="inline-flex items-center w-auto text-text-primary-silverlight hover:underline font-medium leading-5 text-sm px-4 py-2.5 transition-all select-none">
+                    Learn<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ms-1.5 -me-0.5" width="24" height="24"
                       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round">
                       <path d="m9 18 6-6-6-6" />
@@ -117,7 +100,7 @@ import PressButton from '../components/PressButton.vue'
     </section>
 
 
-    <section class="max-h-screen p-10 bg-woodsmoke-darkest">
+    <section class="p-10 bg-woodsmoke-darkest">
       <div class="flex justify-center">
         <div class="max-w-4xl">
           <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
