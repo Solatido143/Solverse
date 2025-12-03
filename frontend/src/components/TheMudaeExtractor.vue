@@ -54,7 +54,7 @@ watch(message, (newValue) => {
     </label>
 
     <textarea id="message" v-model="message" rows="4"
-        class="block w-full p-3 mb-2 rounded-xl bg-shadow-deep-umbra/80 border border-gray-300/20 backdrop-blur-sm text-sm text-text-primary-silverlight focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
+        class="block w-full p-3 mb-2 rounded-xl bg-cinder border border-gray-300/20 backdrop-blur-sm text-sm text-text-primary-silverlight focus:ring-2 focus:ring-accent-glow-lumina-core focus:border-accent-glow-lumina-core outline-none transition"
         placeholder="Example: #7 - Bunny Girl Senpai - Seishun Buta Yarou #15 - Makima 💞 - Chainsaw Man"></textarea>
 
     <div class="mb-2">

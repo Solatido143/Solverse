@@ -95,8 +95,6 @@ import PressButton from '../components/PressButton.vue'
           </div>
         </div>
       </div>
-
-
     </section>
 
 

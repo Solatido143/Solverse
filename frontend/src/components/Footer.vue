@@ -3,7 +3,7 @@ export default {
     data() {
         return {
             github: 'https://github.com/Solatido143',
-			linkedin: 'https://www.linkedin.com/in/mark-anthony-sol-cruz-2128052ab/',
+            linkedin: 'https://www.linkedin.com/in/mark-anthony-sol-cruz-2128052ab/',
             instagram: 'https://www.instagram.com/mopisol_/',
         }
     }
@@ -11,13 +11,14 @@ export default {
 </script>
 
 <template>
-    <footer
-        class="p-4 py-12 md:p-12 text-text-muted-ashen text-sm border-t border-border-soft-veil bg-cinder shadow-inner space-x-0 space-y-12">
+    <footer class="p-4 py-12 md:p-12 text-text-muted-ashen text-sm bg-cinder shadow-inner space-x-0 space-y-12">
 
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-center space-y-6 md:space-y-0 text-center">
             <div class="flex justify-center md:justify-start mb-8 md:mb-0">
-                <img class="h-10" src="@/assets/favicon.png" alt="image">
+                <RouterLink to="/">
+                    <img class="h-10" src="@/assets/favicon.png" alt="image">
+                </RouterLink>
             </div>
 
             <div class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 justify-center">

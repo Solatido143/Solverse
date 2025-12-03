@@ -10,7 +10,7 @@ const clickToContinue = () => {
 
 <template>
     <main @click="clickToContinue"
-        class="flex-grow flex flex-col items-center justify-center px-6 py-10 bg-gradient-to-b from-gray-900 to-black transition-all duration-500">
+        class="flex-grow flex flex-col items-center justify-center px-6 py-10 bg-gradient-to-b from-gray-900 to-black transition-all duration-500 min-h-screen cursor-pointer select-none">
         <!-- Synopsis Section -->
         <div v-if="!proceed" class="text-center max-w-2xl cursor-pointer select-none transition-opacity duration-700">
             <h1 class="text-2xl font-bold mb-4 text-text-primary-silverlight">
