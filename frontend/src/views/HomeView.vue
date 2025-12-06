@@ -18,7 +18,7 @@ import PressButton from '../components/PressButton.vue'
           <p class="mb-8 text-text-muted-ashen">Solverse is where ideas become code. A place to construct small tools,
             test new concepts, and sharpen the skills that matter in development.</p>
           <div class="flex space-x-4">
-            <PressButton href="#tools" label="Explore" />
+            <PressButton href="#portfolio_list_section" label="Explore" />
             <PressButton label="Read" bgColor="tickle-me-pink" stateMatter="hollow" textColorHover="woodsmoke" />
           </div>
         </div>
@@ -85,7 +85,7 @@ import PressButton from '../components/PressButton.vue'
       </div>
     </section>
 
-    <section id="feature_section" class="bg-woodsmoke-darker py-16">
+    <section id="portfolio_list_section" class="bg-woodsmoke-darker py-16">
       <div class="md:py-4">
         <div class="px-4 mx-auto max-w-screen-2xl text-center">
           <h1 class="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-4xl">
