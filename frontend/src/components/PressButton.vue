@@ -12,15 +12,19 @@ const props = defineProps({
     },
     bgColor: {
         type: String,
-        default: 'cornflower-blue'
+        default: 'bg-cornflower-blue'
+    },
+    borderColor: {
+        type: String,
+        default: 'border-cornflower-blue-darker'
     },
     bgHover: {
         type: String,
-        default: 'cornflower-blue-dark'
+        default: 'hover:bg-cornflower-blue-dark'
     },
     shadow: {
         type: String,
-        default: 'cornflower-blue-darker'
+        default: 'shadow-cornflower-blue-darker'
     },
     textColor: {
         type: String,
@@ -33,17 +37,16 @@ const props = defineProps({
 });
 
 const buttonClasses = computed(() => {
-    const base = 'inline-flex items-center w-auto font-medium leading-5 rounded-full text-sm px-4 py-2.5 transition-all select-none shadow-[0_4px_0_0] active:shadow-[0_0_0_0] active:translate-y-[4px]';
+    const base = 'inline-flex items-center w-auto font-medium leading-5 text-sm px-4 py-2.5 transition-all select-none shadow-[0_4px_0_0] active:shadow-[0_0_0_0] active:translate-y-[4px]';
 
-    const bgHover = `hover:bg-${props.bgHover}` || `hover:bg-${props.bgHover}`;
-    const shadow = `shadow-${props.shadow}` || `shadow-${props.shadow}`;
+    const bgHover = props.bgHover;
+    const shadow = props.shadow;
+    const border = props.borderColor;
 
-    const textColorHover = `hover:text-${props.textColorHover}` || `hover:text-${props.textColorHover}`
-
-    if (props.stateMatter === 'hollow' && props.bgColor) {
-        return `${base} box-border border-t border-l border-r border-${props.bgColor} shadow-${props.bgColor}-darker hover:bg-${props.bgColor}-dark ${props.textColor} ${textColorHover}`;
+    if (props.stateMatter === 'hollow') {
+        return `${base}`;
     }
-    return `${base} bg-${props.bgColor} shadow-${props.bgColor}-darker hover:bg-${props.bgColor}-dark ${props.textColor}`;
+    return `${base} ${props.bgColor} border ${border} ${shadow} ${bgHover} ${props.textColor}`;
 })
 
 </script>
