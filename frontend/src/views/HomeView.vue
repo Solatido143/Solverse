@@ -18,8 +18,8 @@ import PressButton from '../components/PressButton.vue'
           <p class="mb-8 text-text-muted-ashen">Solverse is where ideas become code. A place to construct small tools,
             test new concepts, and sharpen the skills that matter in development.</p>
           <div class="flex space-x-4">
-            <PressButton href="#portfolio_list_section" label="Explore" />
-            <PressButton label="Read" bgColor="tickle-me-pink" stateMatter="hollow" textColorHover="woodsmoke" />
+            <PressButton href="#portfolio_list_section" class="rounded-full" label="Explore"  />
+            <PressButton label="Read" stateMatter="hollow" class="border border-tickle-me-pink-darker shadow-tickle-me-pink-darker hover:bg-tickle-me-pink-dark hover:text-text-black-onyx rounded-full"/>
           </div>
         </div>
       </div>
@@ -114,10 +114,7 @@ import PressButton from '../components/PressButton.vue'
           </div>
         </div>
         <div class="flex justify-center">
-          <RouterLink
-            class="text-body text-cornflower-blue hover:text-text-primary-silverlight border-box border-2 border-b rounded-full border-cornflower-blue shadow-[0_4px_0_-1px] shadow-cornflower-blue-dark hover:bg-cornflower-blue active:shadow-[0_0_0_0] active:translate-y-[4px] font-medium leading-5 text-base px-5 py-3 transition-all select-none">
-            View All
-          </RouterLink>
+          <PressButton label="View All" class="rounded-full"/>
         </div>
       </div>
     </section>
